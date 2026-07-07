@@ -1,0 +1,7 @@
+Full Name,Email Address,Phone,Company Name,Location,Lead Status,Remarks,Campaign,Created On
+John Doe,john.doe@example.com,+91 9876543210,GrowEasy,"Mumbai, Maharashtra",Follow Up,Client asking to reschedule demo,Eden Park,2026-05-13 14:20:48
+Sarah Johnson,sarah.johnson@example.com; sarah.j@work.com,9876543211,Tech Solutions,Bangalore Karnataka,Could not connect,"Person was busy, will try next week",Meridian Tower,13/05/2026
+Rajesh Patel,,+91-9876543212,Startup Inc,Delhi,Not interested,Bad lead - do not contact,,2026-05-13
+Priya Singh,priya.singh@example.com,98765 43213 / 98765 11111,Enterprise Corp,Pune Maharashtra,Deal closed,Onboarding in progress,Sarjapur Plots,2026-05-13 14:35:22
+Empty Row,,,,,,,,
+Anonymous Lead,,,No Contact Co,Chennai,,Missing all contact info,,2026-05-14
