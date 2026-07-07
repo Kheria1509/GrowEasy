@@ -73,10 +73,26 @@ export async function extractLeadsStreamController(
   const { rows } = parseCsv(req.file!.buffer);
 
   res.status(200);
-  res.setHeader("Content-Type", "application/x-ndjson; charset=utf-8");
-  res.setHeader("Cache-Control", "no-cache, no-transform");
-  res.setHeader("Connection", "keep-alive");
-  res.setHeader("X-Accel-Buffering", "no"); // disable proxy buffering (e.g. nginx)
+  res.setHeader(
+  "Access-Control-Allow-Origin",
+  "https://groweasy-qhhs.onrender.com"
+);
+res.setHeader("Access-Control-Allow-Credentials", "true");
+res.setHeader("Vary", "Origin");
+
+res.setHeader(
+  "Content-Type",
+  "application/x-ndjson; charset=utf-8"
+);
+res.setHeader("Cache-Control", "no-cache, no-transform");
+res.setHeader("Connection", "keep-alive");
+res.setHeader("X-Accel-Buffering", "no");
+
+// Flush headers immediately
+if (typeof res.flushHeaders === "function") {
+  res.flushHeaders();
+}
+
 
   const write = (event: Record<string, unknown>) => {
     res.write(`${JSON.stringify(event)}\n`);
